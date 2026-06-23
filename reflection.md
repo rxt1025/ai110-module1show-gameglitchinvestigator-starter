@@ -8,8 +8,8 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 The first time when I ran the game the output says go lower.I was expecting to run the game when I will enter an input.
 - List at least two concrete bugs you noticed at the start  
   (for example: "the hints were backwards").
-  1. At first attempt, even if I enter a number according to the instruction, it tells me to enter a number again even if it was correct.
-  2. The page needs to be refresh during even attempt to work on it and during new game it needs to be refresh to work. 
+  1. At first attempt, even if I enter a number according to the instruction, it tells me to enter a number (lower/higher) again even if it was correct.
+  2.  I needed to reload the game before every new game. Otherwise, it doesn't work. 
  
 
 **Bug Reproduction Log**
@@ -39,10 +39,11 @@ AI suggested me to delete str(secret) and use str(st.session_state.secret) to av
 ## 3. Debugging and testing your fixes
 
 - How did you decide whether a bug was really fixed?
-When I try to play the game again and saw the results, I was sure that the bug was fixed.For example: on app.py I chnaged the check_guess function.
+When I try to play the game again and saw the results, I was sure that the bug was fixed.For example: on logic_utils.py I chnaged the check_guess function.
 - Describe at least one test you ran (manual or using pytest)
 and what it showed you about your code.
-I run the test app.py and it showed me No module named 'streamlit'
+I run the test and it showed me collected 3 itmes and 3 passed in the test_game_logic.py file.
+
 
 - Did AI help you design or understand any tests? How?
 Yes, when I asked AI to show me why after each even attempt I need to refresh the page to get a result.
@@ -58,9 +59,13 @@ State is a special dictionary that remembers values between those re-runs, so th
 ## 5. Looking ahead: your developer habits
 
 - What is one habit or strategy from this project that you want to reuse in future labs or projects?
-  - This could be a testing habit, a prompting strategy, or a way you used Git.
+- This could be a testing habit, a prompting strategy, or a way you used Git.
   I would look at app/game where I have a doubt and I would come back to the exact function of the code to see what is incorrect about the code.
 - What is one thing you would do differently next time you work with AI on a coding task?
 Before asking AI and delve myself into cofusion, I would first verify the problem by myself first.
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
 I used to think that AI generated code meaning evrything is given by AI. It is true at some extent. However, AI is not correct all the time. To verify it we need to have the skill to check it, it will not be correct all the time.
+
+
+
+
